@@ -79,10 +79,10 @@ Example Usage:
 #### MNIST
 Dataset - https://yann.lecun.com/exdb/mnist
 
-**Normal
+**Normal**
 
-![MNIST Generated Images](outputs/MNIST/generated_normal.jpg)
+![MNIST Generated Images](outputs/MNIST/generated_normal.png)
 
-**With Gradient Penalty
+**With Gradient Penalty**
 
-![MNIST Generated Images](outputs/MNIST/generated_gp.jpg)
+![MNIST Generated Images](outputs/MNIST/generated_gp.png)
