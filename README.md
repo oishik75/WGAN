@@ -25,13 +25,13 @@ Install the required libraries
         --critic_iterations CRITIC_ITERS                                     No. of critic training iterations before 1 gneerator training itereation
         --batch_size BATCH_SIZE(INT)                                         Batch size for training.
         --image_size IMG_SIZE(INT)                                           Size of the image to be passed to the model.
-        --image_channels IMG_CHANNELS(INT)                                   No of channels in the image. 1 - Grayscale 3 - Colour
+        --image_channels IMG_CHANNELS(INT)                                   No of channels in the image. 1 - Grayscale 3 - Colour.
         --z_dim Z_DIM(INT)                                                   Length of the noise vector to be passed as input to the generator.
         --features_d FEATURES_D(INT)                                         Base number of feature maps in discriminator. Each conv layer has a multiple of FEATURES_D feature maps.
         --features_g FEATURES_G(INT)                                         Base number of feature maps in generator. Each conv_transpose layer has a multiple of FEATURES_G feature maps.
-        --weight_clip WEIGHT_CLIP                                            Weight clip value for vanilla WGAN loss
-        --lambda_gp LAMBDA_GP                                                Weight of gradient_penalty loss in WGAN (when use_gradient_penalty is enabled)
-        --optimizer OPTIMIZER                                                Type of optimizer to use. Choices - [RMSprop, Adam]
+        --weight_clip WEIGHT_CLIP                                            Weight clip value for vanilla WGAN loss.
+        --lambda_gp LAMBDA_GP                                                Weight of gradient_penalty loss in WGAN (when use_gradient_penalty is enabled).
+        --optimizer OPTIMIZER                                                Type of optimizer to use. Choices - [RMSprop, Adam].
 
 
 Example Usage:
@@ -71,7 +71,7 @@ Example Usage:
     python generate_images.py \
         --model models/checkpoint_9.pt \
         --n_images 32 \
-        --save_path outputs/MNIST/generated-jpg
+        --save_path outputs/MNIST/generated.jpg
         --z_dim 100 \
         --features_g 64
 
