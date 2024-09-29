@@ -124,7 +124,8 @@ def main():
     # DATASET ARGUMENTS
     parser.add_argument("--dataset_name", choices=["MNIST", "FashionMNIST"], help="Dataset Name")
     parser.add_argument("--data_path", default=None, help="Dataset folder path")
-    # HYPERPARAMETERS
+    # PARAMETERS / HYPERPARAMETERS
+    parser.add_argument("--use_gradient_penalty", action="store_true")
     parser.add_argument("--lr", type=float, default=5e-5)
     parser.add_argument("--batch_size", type=int, default=64)
     parser.add_argument("--image_size", type=int, default=64)
@@ -139,7 +140,6 @@ def main():
     parser.add_argument("--optimizer", choices=["RMSprop", "Adam"], default="RMSprop")
     # OTHERS
     parser.add_argument("--exp_name", default=None)
-    parser.add_argument("--use_gradient_penalty", action="store_true")
     parser.add_argument("--no_cuda", action="store_true")
     parser.add_argument("--logs_dir", default="logs")
     parser.add_argument("--save_dir", default="models")
