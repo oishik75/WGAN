@@ -41,14 +41,19 @@ Example Usage:
         --experiment_name MNIST \
         --save_dir "models" \
         --logs_dir "logs" \
+        --use_gradient_penalty \
         --lr 1e-5 \
         --n_epochs 5 \
+        --critic_iterations 5 \
         --batch_size 128 \
         --image_size 64 \
         --image_channels 1 \
         --z_dim 100 \
+        --gen_embed_dim 100 \
         --features_d 64 \
-        --features_g 64
+        --features_g 64 \
+        --lambda_gp 10 \
+        --optimizer Adam
 
 
 #### Image Generation
@@ -71,6 +76,7 @@ Example Usage:
     python generate_images.py \
         --model models/checkpoint_9.pt \
         --n_images 32 \
+        --image_channels 1 \
         --save_path outputs/MNIST/generated.jpg
         --z_dim 100 \
         --features_g 64
